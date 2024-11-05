@@ -1,5 +1,4 @@
 local RSGCore = exports['rsg-core']:GetCoreObject()
-local isCommerce = false
 
 RegisterCommand(Config.CreateFine, function(source, args)
     local _source = source
@@ -119,22 +118,7 @@ RegisterNetEvent('btc-fines:server:payfine', function(fineid, fineprice, locatio
     local Player = RSGCore.Functions.GetPlayer(_source)
     local money = Player.Functions.GetMoney('cash')
     local cost = tonumber(fineprice)
-    for k, v in pairs(Config.PlayerJobCommerce) do
-        if location == v then
-            if money > fineprice then
-                Player.Functions.RemoveMoney('cash', cost)
-                MySQL.update('DELETE FROM btc_fines WHERE id = ?', { fineid })
-                exports['btc-commerce']:AddMoney(location, cost)
-                jo.notif.rightSuccess(_source, Language.lang_29)
-                isCommerce = true
-            else
-                jo.notif.rightError(_source, Language.lang_30)
-                isCommerce = true
-            end
-        end
-    end
 
-    if not isCommerce then
         if money > fineprice then
             Player.Functions.RemoveMoney('cash', cost)
             MySQL.update('DELETE FROM btc_fines WHERE id = ?', { fineid })
@@ -143,5 +127,4 @@ RegisterNetEvent('btc-fines:server:payfine', function(fineid, fineprice, locatio
         else
             jo.notif.rightError(_source, Language.lang_30)
         end
-    end
 end)
