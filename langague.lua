@@ -1,0 +1,36 @@
+Language = {}
+
+Language = {
+    lang_1 = 'você não tem permissão para isso',
+    lang_2 = 'ninguem próximo suficiente',
+    lang_3 = 'Multas',
+    lang_4 = 'Multe um pessoa',
+    lang_5 = 'Criar uma multa',
+    lang_6 = 'Registre a multa nos arquivos da lei',
+    lang_7 = 'Registrar multa',
+    lang_8 = 'Descrição da multa',
+    lang_9 = 'Insira a descrição da infração - MAX 500 caracteres',
+    lang_10 = 'Valor',
+    lang_11 = 'Valor da multa a ser aplicada',
+    lang_12 = 'Insira o nome do infrator',
+    lang_13 = 'Nome',
+    lang_14 = 'Insira o sobrenome do infrator',
+    lang_15 = 'Sobrenome',
+    lang_16 = 'Multas Inadimplentes',
+    lang_17 = 'Veja as multa que ainda não foram pagas',
+    lang_18 = 'Inadimplentes',
+    lang_19 = 'Data da Multa:',
+    lang_20 = 'Multa Aplicada',
+    lang_21 = 'Multa Aplicada por:',
+    lang_22 = 'Referência:',
+    lang_23 = 'Descrição:',
+    lang_24 = 'Apagar multa',
+    lang_25 = 'Ao aceitar você irá apagar essa multa para sempre. Você tem certeza disso?',
+    lang_26 = 'Você não ter permissão para isso!',
+    lang_27 = 'Você só pode apagar uma multa que seja da sua jurisdição!',
+    lang_28 = 'Multa apagada!',
+    lang_29 = 'Multa paga!',
+    lang_30 = 'Você não possui dinheiro suficiente!',
+
+
+}
