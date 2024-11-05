@@ -6,11 +6,11 @@ RegisterCommand(Config.CreateFine, function(source, args)
     local location = Player.PlayerData.job.name
     local player, distance = RSGCore.Functions.GetClosestPlayer(_source)
     local Infrator = RSGCore.Functions.GetPlayer(tonumber(player))
-    local infratorid = Infrator.PlayerData.citizenid
 
     for k, v in pairs(Config.PLayerJobTypes) do
         if Player.PlayerData.job.type == v then
             if  player ~= -1 and distance < 1 then
+            local infratorid = Infrator.PlayerData.citizenid
             TriggerClientEvent('btc-fines:client:createfine', _source, infratorid, tonumber(1), location)
             else
             jo.notif.rightError(_source, Language.lang_2)
