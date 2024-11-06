@@ -88,7 +88,7 @@ RegisterNetEvent('btc-fines:client:endanimation', function()
 end)
 
 
-RegisterNetEvent('btc-mdt:client:archivesall', function(archives, location, jobtype)
+RegisterNetEvent('btc-fines:client:archivesall', function(archives, location, jobtype)
     local menu = jo.menu.create('archivesmenuall', {
         title = Language.lang_3,
         subtitle = Language.lang_18,
@@ -189,7 +189,7 @@ RegisterNetEvent('btc-mdt:client:archivesall', function(archives, location, jobt
     jo.menu.show(true, true, false)
 end)
 
-RegisterNetEvent('btc-mdt:client:myfinesmenu', function(archives, citizenid)
+RegisterNetEvent('btc-fines:client:myfinesmenu', function(archives, citizenid)
     local menu = jo.menu.create('myfinesmenu', {
         title = Language.lang_3,
         subtitle = Language.lang_18,

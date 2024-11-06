@@ -20,6 +20,18 @@ RegisterCommand(Config.CreateFine, function(source, args)
     end
 end)
 
+RegisterCommand(Config.SeeFine, function(source, args)
+    local _source = source
+    local Player = RSGCore.Functions.GetPlayer(_source)
+
+    for k, v in pairs(Config.PLayerJobTypes) do
+        if Player.PlayerData.job.type == v then
+            TriggerEvent('btc-fines:server:getarchivesall')
+            return
+        end
+    end
+end)
+
 
 RegisterCommand(Config.CheckFine, function(source, args)
     local _source = source
@@ -77,7 +89,7 @@ RegisterNetEvent('btc-fines:server:getarchivesall', function()
         table.sort(archives, function(a)
             return a
         end)
-        TriggerClientEvent('btc-mdt:client:archivesall', _source, archives, location, jobtype)
+        TriggerClientEvent('btc-fines:client:archivesall', _source, archives, location, jobtype)
     end
 end)
 
@@ -102,7 +114,7 @@ RegisterNetEvent('btc-fines:server:getmyfines', function(source, citizenid)
         table.sort(archives, function(a)
             return a
         end)
-        TriggerClientEvent('btc-mdt:client:myfinesmenu', _source, archives, citizenid)
+        TriggerClientEvent('btc-fines:client:myfinesmenu', _source, archives, citizenid)
     end
 end)
 
