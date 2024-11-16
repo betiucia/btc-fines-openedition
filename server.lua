@@ -7,7 +7,7 @@ RegisterCommand(Config.CreateFine, function(source, args)
     local player, distance = RSGCore.Functions.GetClosestPlayer(_source)
     local Infrator = RSGCore.Functions.GetPlayer(tonumber(player))
 
-    for k, v in pairs(Config.PLayerJobTypes) do
+    for k, v in pairs(Config.PlayerJobTypes) do
         if Player.PlayerData.job.type == v then
             if  player ~= -1 and distance < 1 then
             local infratorid = Infrator.PlayerData.citizenid
@@ -24,7 +24,7 @@ RegisterCommand(Config.SeeFine, function(source, args)
     local _source = source
     local Player = RSGCore.Functions.GetPlayer(_source)
 
-    for k, v in pairs(Config.PLayerJobTypes) do
+    for k, v in pairs(Config.PlayerJobTypes) do
         if Player.PlayerData.job.type == v then
             TriggerEvent('btc-fines:server:getarchivesall')
             return
